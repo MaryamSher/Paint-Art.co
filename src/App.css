@@ -1,38 +1,698 @@
-.App {
+/* //////////general//////////////// */
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.titleHolder {
+  text-align: center;
+  position: relative;
+  padding: 30px 20px;
+  margin: 40px 40px;
+}
+
+.titleHolder:after {
+  transform: translateX(-50%);
+  content: "";
+  background: darkmagenta;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 50px;
+}
+
+.titleHolder h2 {
+  font-size: 28px;
+  margin: 0;
+}
+.titleHolder p {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* //////////////header////////////////// */
+
+.layout .ant-layout-header {
+  background: rgb(255, 255, 255);
+}
+.ant-layout-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0.9;
+}
+.ant-layout {
+  background: rgb(255, 255, 255) !important;
+}
+.navbar .ant-anchor {
+  display: flex;
+}
+.ant-anchor-ink {
+  display: none;
+}
+.ant-anchor-wrapper {
+  background: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo .fas {
+  color: darkmagenta;
+  font-size: 30px;
+}
+.nav-logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+.ant-anchor-link-title:hover {
+  color: darkmagenta;
+}
+.ant-anchor-link-active > .ant-anchor-link-title {
+  color: darkmagenta;
+}
+.mobileVisible {
+  display: none;
+}
+
+/* ///////////////home////////////////// */
+
+.homeBlock {
+  background: url("assets/bg/bg5.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: 0% 75%;
+}
+.homeCarousel {
+  line-height: 50px;
+  height: 350px;
+  text-align: center;
+  color: darkmagenta;
+  margin-top: 250px;
+}
+.homeCarousel h3 {
+  color: darkmagenta;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.homeCarousel p {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.home-btn {
+  padding: 4rem;
+}
+
+.ant-btn {
+  color: darkmagenta;
+}
+.ant-btn:hover {
+  color: darkmagenta;
+  border: solid 1px darkmagenta;
+}
+
+.fas {
+  margin-right: 9px;
+  color: darkmagenta;
+}
+
+.primary-btn {
+  margin-right: 1rem;
+}
+
+.ant-btn-background-ghost.ant-btn-primary {
+  color: darkmagenta;
+  border-color: darkmagenta;
+  text-shadow: none;
+}
+.ant-btn-background-ghost.ant-btn-primary:hover {
+  color: white;
+  background-color: darkmagenta;
+  border: solid 1px darkmagenta;
+}
+
+/* ////////////about////////////////// */
+
+.content {
+  text-align: center;
+  margin: 0px 40px;
+}
+.about-card {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon {
+  font-size: 2rem;
+  color: darkmagenta;
+}
+.roadmap {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin: 40px 0rem;
+  box-shadow: 20px 20px 40px grey;
+  letter-spacing: 1px;
+}
+.about-row-container {
+  margin: 10px 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* //////////////////ART///////////////// */
+.art-bg {
+  background: url("/src/assets/bg/bg7.jpg") no-repeat;
+  background-position: 50% 40%;
+  background-attachment: fixed;
+  width: 100%;
+}
+.art-bg-grid {
+  background: url("/src/assets/bg/bg7.jpg") no-repeat;
+  background-position: 50% 40%;
+  background-attachment: fixed;
+  width: 100%;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* /////////////////ARTIST///////////////// */
+.artist-bg {
+  background: #f0f2f5;
+}
+.artist-container {
+  margin: 2rem;
+}
+.artist {
+  border-radius: 10px;
+  font-size: 0.6rem;
+}
+.artist img {
+  border-radius: 10px;
+}
+.artist-btnHolder {
+  text-align: center;
+  margin: 20px;
+}
+.artist-btn {
+  background-color: white;
+  border: solid 1px darkmagenta;
+  border-radius: 0.5rem;
+  padding: 4px 1.5rem;
+  margin-bottom: 2rem;
+}
+.artist-btn:hover {
+  background-color: darkmagenta;
+  color: white;
+  border: none;
+}
+
+/* //////////////////GALLERY/////////////////// */
+
+.grid-container-col {
   display: flex;
-  flex-direction: column;
+  margin: 30px 50px;
+  margin-top: 50px;
+}
+
+.gallery-heading {
+  font-size: 4rem;
+  text-align: center;
+}
+.gallery-heading h6 {
+  font-size: 3.5rem;
+  margin-top: 5rem;
+}
+.gallery-heading p {
+  font-size: 1.4rem;
+  margin-top: 9rem;
+}
+
+.gallery-pic img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+/* ////////////////FEATURED/////////////// */
+
+.grid-container-row {
+  margin: 30px 0px;
+}
+.featured-pic img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.text-container {
+  text-align: center;
+}
+.text-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ////////////////////FAQ///////////////// */
+
+.faq-bg {
+  background: url("../src/assets/bg/bg1.jpg");
+}
+[data-theme="compact"]
+  .site-collapse-custom-collapse
+  .site-collapse-custom-panel,
+.site-collapse-custom-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #f7f7f7;
+  border: 0px;
+  border-radius: 2px;
+}
+
+/* /////////////////////////CONTACT////////////////////// */
+.ant-form {
+  margin: auto;
+  max-width: 640px;
+}
+.login-form-button {
+  color: darkmagenta;
+  background-color: white;
+  border: solid 1px darkmagenta;
+  width: 6rem;
+
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.login-form-button:hover {
+  color: white;
+  background-color: darkmagenta;
+}
+
+/* ///////////////////FOOTER///////////////// */
+.ant-layout-footer {
+  background: #ebedf0;
+}
+.footer-container {
+  text-align: center;
+  width: 100%;
+}
+.footer-logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: rgb(70, 70, 70);
+}
+.footer-logo .fas {
+  color: darkmagenta;
+  font-size: 30px;
+}
+
+.socials ul {
+  list-style: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.5rem;
+  padding: 0;
+}
+.socials li {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+.socials a {
+  color: darkmagenta;
+}
+.socials a:hover {
+  margin: 2rem;
+  color: rgb(70, 70, 70);
+  transition: 0.3s ease-in;
+}
+.copyright {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 10px;
+}
+.copyright ul a {
+  padding: 0.5rem;
+  font-size: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.goTop {
+  font-size: 2rem;
+}
+.goTop:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ////////////////////RESPONSIVENESS/////////////////////// */
+
+@media only screen and (max-width: 1024px) {
+  .homeCarousel {
+    line-height: 50px;
+    height: 350px;
+    margin-top: 400px;
   }
-  to {
-    transform: rotate(360deg);
+  .homeCarousel h3 {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .homeCarousel p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .grid-container-col {
+    display: flex;
+    margin: 40px 20px;
+  }
+
+  .gallery-heading {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 2.2rem;
+    margin-top: 3.5rem;
+  }
+  .gallery-heading p {
+    font-size: 1.26rem;
+    margin-top: 5rem;
+  }
+
+  .gallery-pic img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .homeCarousel {
+    height: 350px;
+    margin-top: 300px;
+  }
+
+  .grid-container-col {
+    display: flex;
+    margin: 40px 20px;
+  }
+
+  .gallery-heading {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 2.2rem;
+    margin-top: 3.5rem;
+  }
+  .gallery-heading p {
+    font-size: 1.2rem;
+    margin-top: 4rem;
+  }
+
+  .gallery-pic img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .drawer-btn {
+    background-color: none;
+    border: none;
+    font-size: 1.3rem;
+  }
+  .drawer-btn:hover {
+    border: none;
+  }
+
+  .mobileVisible {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .roadmap {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    margin: 30px 0rem;
+    box-shadow: 25px 25px 45px grey;
+    letter-spacing: 0px;
+  }
+  .grid-container-col {
+    display: flex;
+    margin: 30px 10px;
+  }
+  .gallery-heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 1.1rem;
+    margin-top: 3rem;
+  }
+  .gallery-heading p {
+    font-size: 0.55rem;
+    margin-top: 3rem;
+  }
+  .gallery-pic img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+  .ant-form {
+    margin: 20px;
+    max-width: 640px;
+  }
+  .titleHolder h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .titleHolder p {
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    text-align: center;
+  }
+  .list-items {
+    padding: 0.3rem;
+    font-size: 10px;
+  }
+
+  .goTop {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .homeCarousel {
+    height: 300px;
+    margin-top: 200px;
+  }
+  .homeCarousel h3 {
+    font-size: 18px;
+  }
+  .homeCarousel p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .grid-container-col {
+    display: flex;
+    margin: 0px 5px;
+  }
+  .gallery-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+  }
+  .gallery-heading p {
+    font-size: 0.6rem;
+    margin-top: 3rem;
+  }
+  .gallery-pic img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .homeCarousel h3 {
+    font-size: 17px;
+  }
+  .homeCarousel p {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .home-btn {
+    padding: 2rem;
+  }
+  .art-bg-grid {
+    font-size: 0.55rem;
+  }
+  .grid-container-col {
+    display: flex;
+    margin: 30px 0px;
+  }
+  .grid-container-row {
+    margin: 0px 0px;
+  }
+  .gallery-heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  .gallery-heading p {
+    font-size: 0.56rem;
+    margin-top: 3rem;
+  }
+  .ant-layout-footer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .homeCarousel {
+    margin-top: 150px;
+  }
+  .gallery-heading h6 {
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+  }
+  .gallery-heading p {
+    font-size: 8px;
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .titleHolder p {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .homeCarousel h3 {
+    font-size: 13px;
+  }
+  .homeCarousel p {
+    font-size: 9px;
+    font-weight: 500;
+  }
+  .home-btn {
+    padding: 0rem;
+  }
+  .drawer-btn {
+    background-color: none;
+    border: none;
+    font-size: 1rem;
+  }
+  .nav-logo .fas {
+    color: darkmagenta;
+    font-size: 20px;
+  }
+  .nav-logo {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .content {
+    text-align: center;
+    margin: 0px 40px;
+    font-size: 0.5rem;
+  }
+  .roadmap {
+    font-size: 5px;
+  }
+  .art-bg-grid {
+    font-size: 0.35rem;
+  }
+  .artist{
+    margin: 40px;
+  }
+
+  .gallery-heading {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .gallery-heading h6 {
+    font-size: 0.8rem;
+    margin-top: 3rem;
+  }
+  .gallery-heading p {
+    font-size: 0.5rem;
+    margin-top: 3.4rem;
+  }
+  .grid-container-row {
+    margin: 0px 0px;
+  }
+  .featured-pic img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+  .text-container {
+    text-align: center;
+  }
+  .text-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .socials ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  .socials li {
+    margin-top: 1rem;
+    padding: 1.2rem;
+    align-items: center;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    font-size: 6px;
+    text-align: center;
+  }
+  .copyright ul a {
+    padding: 0.5rem;
+    font-size: 4px;
+  }
+
+  .goTop {
+    font-size: 1rem;
   }
 }
